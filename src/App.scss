@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+KR:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", "Noto Sans KR", "Source Serif 4", serif;
+  letter-spacing: -0.05rem;
+}
+
+html {
+  font-size: 62.5%;
+
+  body {
+    overflow-x: hidden;
+
+    .app-container {
+      &.up {
+        .top_banner {
+          transform: translateY(-110%);
+        }
+
+        header {
+          top: 0;
+        }
+      }
+    }
+  }
+
+  section {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding: 13rem 0;
+  }
+
+  .inner {
+    position: relative;
+    max-width: 160rem;
+    margin: auto;
+    z-index: 0;
+    height: 100%;
+    display: flex;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #3BC5BB;
+    border-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #E7E7E7;
+  }
+
+  ul,
+  ol,
+  dl {
+    list-style-type: none;
+  }
+
+  h1 {
+    font-family: Merriweather;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .con_tit {
+    font-size: 6rem;
+    line-height: 6.6rem;
+    margin: 3rem 0 2rem;
+    letter-spacing: 0;
+    font-weight: 450;
+
+    &.large {
+      font-size: 7.3rem;
+      line-height: 8.5rem;
+    }
+  }
+
+  .txt {
+    font-family: "Noto Sans KR";
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: #202020;
+
+    &.l_txt {
+      font-size: 2.1rem;
+    }
+  }
+
+  .txt_1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.9rem;
+    color: #000;
+    line-height: 1.9rem;
+  }
+
+  .txt_2 {
+    font-size: 1.9rem;
+    color: #000000;
+    letter-spacing: 0;
+  }
+
+  .txt_3 {
+    font-size: 2rem;
+    color: #231F20;
+    font-weight: 500;
+  }
+
+  .txt_4 {
+    font-size: 1.5rem;
+    color: #6f6f6f;
+    margin: 2rem 0 3rem;
+  }
+
+  .txt_5 {
+    font-family: 'Noto Sans KR', serif;
+    font-size: 1.5rem;
+    color: #231F20;
+    font-style: italic;
+  }
+
+  .con_btn {
+    font-family: "Noto Sans KR";
+    line-height: 1.4rem;
+    position: relative;
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 1.9rem 6.1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 0;
+    border-radius: 6rem;
+    overflow: hidden;
+    border: .1rem solid transparent;
+    transition: all .8s;
+
+    &.blue {
+      background-color: #3BC5BB;
+      font-size: 2.5rem;
+      font-weight: 450;
+      border-radius: 5rem 5rem 15rem 15rem;
+      color: black;
+
+      &::after {
+        background-color: #3BC5BB;
+      }
+
+      &:hover {
+        background-color: #fff;
+        border-color: #3BC5BB;
+        color: #3BC5BB;
+        font-weight: 450;
+
+        &::after {
+          background: #fff;
+        }
+      }
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #424141, #000);
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      transition: all .5s;
+    }
+
+    &:hover {
+      color: #FFFF;
+
+      &:after {
+        background: linear-gradient(to bottom, #3BC5BB, #154d49);
+        // width: 0%;
+
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width:400px) {
+  html{
+    section{
+      padding: 5rem 0;
+    }
+  .con_tit.large {
+    font-size: 3.4rem;
+        line-height: 3.8rem;
+        text-align: center;
+
+  }
+  }
+
+}

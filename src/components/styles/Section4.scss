@@ -1,0 +1,53 @@
+.sc4 {
+  background-color: #F4F4F4;
+
+  .inner {
+    max-width: 128rem;
+    display: block;
+
+    .con_tit {
+      color: #3BC5BB;
+    }
+
+    .s4_lst {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+      gap: 1rem;
+
+      li {
+        width: 20rem;
+        height: 20rem;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1379px) {
+  .sc4 {
+    .inner {
+      .s4_lst{
+        li{
+          width: 15rem;
+          height: 15rem;
+        }
+      }
+      .t-wrap {
+        text-align: center;
+
+        .con_tit {
+          font-size: 5.5rem;
+        }
+      }
+
+    }
+  }
+
+}
+
+@media screen and (max-width:955px) {
+  .sc4 .inner .s4_lst{
+   flex-wrap: wrap;
+  }
+}

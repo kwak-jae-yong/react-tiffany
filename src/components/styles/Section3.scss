@@ -1,0 +1,148 @@
+.sc3 {
+  padding: 13rem 0 0;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10rem;
+    bottom: 0;
+    background-color: #F4F4F4;
+    z-index: -1;
+  }
+
+  .inner {
+    justify-content: space-between;
+
+    .con_tit {
+      color: #000;
+
+      strong {
+        color: #3BC5BB;
+      }
+    }
+
+    .s3_sl_wrap {
+      position: relative;
+      width: 80rem;
+      height: 50rem;
+
+      .in {
+        position: absolute;
+        width: 200%;
+
+        height: 100%;
+        overflow: hidden;
+
+        .swiper {
+          height: 100%;
+
+          .swiper-slide>div {
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+          }
+
+          .s3_sl1 {
+            background-image: url(/img/s3_sl2.gif);
+          }
+
+          .s3_sl2 {
+            background-image: url(/img/s3_sl3.gif);
+          }
+
+          .s3_sl3 {
+            background-image: url(/img/s3_sl4.gif);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1379px) {
+  .sc3 {
+    .inner {
+      justify-content: space-evenly;
+
+      .t-wrap {
+        .con_tit {
+          font-size: 3.5rem;
+          line-height: 4.5rem;
+        }
+
+        .con_btn {
+          padding: 1.9rem 4.5rem;
+        }
+
+        .txt {
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      .s3_sl_wrap {
+        width: 51rem;
+        height: 26rem;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width:879px) {
+
+  .sc3 {
+    .inner {
+      flex-direction: column;
+      align-items: center;
+      gap: 4.3rem;
+
+      .t-wrap {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .con_tit {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+
+        }
+
+        .con_btn {
+          padding: 1.9rem 4.5rem;
+        }
+
+        .txt {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      .s3_sl_wrap {
+        width: 35rem;
+        height: 19rem;
+
+        .in {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:410px) {
+  .sc3{
+    padding: 5rem 0 0;
+    .inner{
+      .s3_sl_wrap{
+        width: 25rem;
+        height: 30rem;
+      }
+    }
+  }
+}

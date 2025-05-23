@@ -1,0 +1,207 @@
+.hero {
+    margin-top: 14.5rem;
+    padding: 0;
+
+    .inner {
+        align-items: center;
+        padding-left: 10rem;
+        margin: 0;
+    }
+
+    .swiper-slide {
+        height: 90rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
+        z-index: 0;
+
+        &.hero_sl_1 {
+
+            height: 70rem;
+            background: url('/img/heroslide01.png');
+
+            .t-wrap {
+                color: black;
+              
+
+                .txt {
+                    color: black
+                }
+            }
+        }
+
+        &.hero_sl_2 {
+            height: 70rem;
+
+            background: url('/img/heroslide03.png');
+
+            .t-wrap {
+                color: black;
+
+                .txt {
+                    color: black
+                }
+            }
+        }
+
+        &.hero_sl_3 {
+            height: 70rem;
+
+            background: url('/img/heroslide02.png');
+
+
+            .t-wrap {
+                color: black;
+
+                .txt {
+                    color: black
+                }
+            }
+        }
+    }
+
+    .hero_nav {
+        position: absolute;
+        z-index: 3;
+        bottom: 8.7rem;
+        left: 13rem;
+        display: flex;
+        gap: 2rem;
+
+        .arr_prev,
+        .arr_next {
+            width: 5rem;
+            height: 1.7rem;
+        }
+
+        .arr_prev {
+            background: url('/img/icon_main_ban_arrow_prev.svg');
+        }
+
+        .arr_next {
+            background: url('/img/icon_main_ban_arrow_next.svg');
+        }
+
+        .swiper-pagination {
+            position: relative;
+            width: 5rem;
+            height: 5rem;
+            color: #000;
+            font-size: 0;
+
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 50px;
+                background-color: #000;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            .swiper-pagination-current {
+                position: absolute;
+                font-size: 2.2rem;
+                top: 0;
+                left: 0;
+            }
+
+            .swiper-pagination-total {
+                position: absolute;
+                font-size: 2.2rem;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1111px) {
+    .hero {
+        .hero_nav {
+            position: absolute;
+            left: 8rem;
+        }
+
+        .swiper-slide {
+            height: 70rem;
+            background-position: center top;
+
+            .t-wrap {
+                position: absolute;
+                left: 7.2vw;
+                bottom: 27rem;
+            }
+
+            &.hero_sl_2 .inner {
+                text-align: left;
+            }
+
+            &.hero_sl_1 {
+                height: 70rem;
+                background-image: url('/img/mob_hero01.png');
+            }
+
+            &.hero_sl_2 {
+                background-image: url('/img/mob_hero02.png');
+            }
+
+            &.hero_sl_3 {
+                background-image: url('/img/mob_hero03.png');
+            }
+        }
+
+    }
+
+
+}
+
+@media screen and (max-width:400px) {
+
+    .hero {
+        .hero_nav {
+            left: 8.5rem;
+        }
+
+        .swiper-slide {
+
+            &.hero_sl_2 .t-wrap,
+            &.hero_sl_3 .t-wrap {
+                padding-right: 4rem;
+            }
+
+            .t-wrap {
+                .txt {
+                    text-align: center;
+                }
+
+                bottom: 16rem;
+                justify-content: space-between;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .con_btn {}
+            }
+
+            &.hero_sl_2 .inner {}
+
+            &.hero_sl_1 {
+                height: 70rem;
+                background-image: url('/img/hero_mobile01.png');
+            }
+
+            &.hero_sl_2 {
+                background-image: url('/img/hero_mobile02.png');
+            }
+
+            &.hero_sl_3 {
+                background-image: url('/img/hero_mobile03.png');
+            }
+        }
+    }
+}
